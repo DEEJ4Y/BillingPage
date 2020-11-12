@@ -1,0 +1,27 @@
+body {
+  background-color: #1b262c;
+  color: #bbe1fa;
+  padding: 3rem 7rem;
+  text-align: center;
+}
+
+button {
+  margin: 3rem auto;
+}
+
+input {
+  margin-right: 5px;
+}
+
+/* Appliance Dropdown Menu */
+.scrollable-menu {
+  height: auto;
+  max-height: 7rem;
+  overflow-x: hidden;
+}
+
+/* Payment Method */
+
+#card {
+  margin-left: 2rem;
+}
