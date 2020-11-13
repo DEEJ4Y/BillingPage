@@ -18,6 +18,7 @@
 
     <div class="container-fluid">
         <h1>RMZ Electricals</h1>
+        <br>
 
         <div class="dropdown">
             <button class="btn btn-lg btn-outline-light dropdown-toggle" type="button" id="applianceMenuButton"
@@ -25,20 +26,22 @@
                 Appliances
             </button>
             <div class="dropdown-menu scrollable-menu" aria-labelledby="applianceMenuButton">
-                <span class="dropdown-item" id="fridge">Fridge</span>
+                <span class="dropdownItems"></span>
+                <!-- <span class="dropdown-item" id="fridge">Fridge</span><span>99,000</span>
                 <span class="dropdown-item" id="desktop">Desktop PC</span>
                 <span class="dropdown-item" id="laptop">Laptop</span>
                 <span class="dropdown-item" id="microwave">Microwave</span>
-                <span class="dropdown-item" id="wmachine">Washing Machine</span>
+                <span class="dropdown-item" id="wmachine">Washing Machine</span> -->
             </div>
         </div>
 
         <p>There are <span id="numberOfCartItems">0</span> items in your cart.</p>
-
-        <input type="radio" name="paymentType" id="cash">Cash On Delivery
-        <input type="radio" name="paymentType" id="card">Card
         <br>
-        <button class="btn btn-primary">Checkout</button>
+        <br>
+
+        <input class="paymentMethod" type="radio" name="paymentMethod" id="cash">Cash On Delivery
+        <input class="paymentMethod" type="radio" name="paymentMethod" id="card">Card
+        <button class="btn btn-primary checkout-button">Checkout</button>
 
     </div>
 

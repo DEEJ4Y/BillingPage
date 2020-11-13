@@ -6,7 +6,7 @@ body {
 }
 
 button {
-  margin: 3rem auto;
+  margin: 1rem auto;
 }
 
 input {
@@ -14,6 +14,11 @@ input {
 }
 
 /* Appliance Dropdown Menu */
+
+div .dropdown {
+  margin-top: 3rem;
+}
+
 .dropdown-item:hover {
   background-color: #0275d8;
   color: white;
@@ -25,8 +30,21 @@ input {
   overflow-x: hidden;
 }
 
+.appliance {
+  float: left;
+}
+
+.price {
+  float: right;
+  margin-left: 2rem;
+}
+
 /* Payment Method */
 
 #card {
   margin-left: 2rem;
+}
+
+.checkout-button {
+  display: block;
 }
