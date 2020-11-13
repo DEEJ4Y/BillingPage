@@ -1,4 +1,16 @@
-$(".dropdown-item").click(function(){
+var cartItems = [];
+
+var choosePaymentMethod = false;
+
+$(".dropdown-item").click(addToCart);
+
+function addToCart(){
     var itemName = $(this).attr("id");
-    alert("You chose a " + itemName);
-});
+    cartItems.push(itemName);
+    changeNumberOfCartItems();
+}
+
+function changeNumberOfCartItems(){    
+    var numberOfCartItems = cartItems.length + 1;
+    $("#numberOfCartItems").html(numberOfCartItems);
+}
