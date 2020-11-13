@@ -9,6 +9,10 @@ button {
   margin: 1rem auto;
 }
 
+hr {
+  border: 0;
+}
+
 input {
   margin-right: 5px;
 }
@@ -19,12 +23,17 @@ div .dropdown {
   margin-top: 3rem;
 }
 
+.dropdown-item {
+  overflow: auto;
+}
+
 .dropdown-item:hover {
   background-color: #0275d8;
   color: white;
 }
 
 .scrollable-menu {
+  width: 15rem;
   height: auto;
   max-height: 7rem;
   overflow-x: hidden;
@@ -39,6 +48,21 @@ div .dropdown {
   margin-left: 2rem;
 }
 
+/* Cart Items section */
+.cart-item-container {
+  width: 16rem;
+  margin: auto;
+  background-color: white;
+  border-radius: 0.2rem;
+}
+
+.cart-item-row {
+  overflow-x: hidden;
+  margin: auto;
+  padding: 0.5rem;
+  color: #1b262c;
+}
+
 /* Payment Method */
 
 #card {
@@ -47,4 +71,8 @@ div .dropdown {
 
 .checkout-button {
   display: block;
+}
+
+.selectCardDropdown {
+  display: inline;
 }

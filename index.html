@@ -25,22 +25,38 @@
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Appliances
             </button>
-            <div class="dropdown-menu scrollable-menu" aria-labelledby="applianceMenuButton">
+            <div class="dropdown-menu scrollable-menu chooseAppliance" aria-labelledby="applianceMenuButton">
                 <span class="dropdownItems"></span>
-                <!-- <span class="dropdown-item" id="fridge">Fridge</span><span>99,000</span>
-                <span class="dropdown-item" id="desktop">Desktop PC</span>
-                <span class="dropdown-item" id="laptop">Laptop</span>
-                <span class="dropdown-item" id="microwave">Microwave</span>
-                <span class="dropdown-item" id="wmachine">Washing Machine</span> -->
             </div>
         </div>
 
-        <p>There are <span id="numberOfCartItems">0</span> items in your cart.</p>
+        <p>There are <span id="numberOfCartItems">0</span> items in your cart totalling Rs <span
+                id="cartItemTotal">0.</span></p>
+
+
+        <div class="cart-item-container">
+            <hr class="cartItemsBorder">
+        </div>
+
         <br>
         <br>
 
         <input class="paymentMethod" type="radio" name="paymentMethod" id="cash">Cash On Delivery
         <input class="paymentMethod" type="radio" name="paymentMethod" id="card">Card
+        <div class="dropdown selectCardDropdown">
+            <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="selectCardMenu"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Choose
+            </button>
+            <div class="dropdown-menu" aria-labelledby="selectCardMenu">
+                <span class="dropdown-item">Axis Bank</span>
+                <span class="dropdown-item">SBI</span>
+                <span class="dropdown-item">HDFC</span>
+                <span class="dropdown-item">ICICI</span>
+                <span class="dropdown-item">Bank of Baroda</span>
+            </div>
+        </div>
+
         <button class="btn btn-primary checkout-button">Checkout</button>
 
     </div>
