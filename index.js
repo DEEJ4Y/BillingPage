@@ -1,13 +1,25 @@
 var shopItems = [["fridge", "Fridge", 109000], ["desktop", "Desktop PC", 49000], ["laptop", "Laptop", 79000], ["microwave", "Microwave", 19000], ["oven", "Oven", 89000]];
 
+$(".selectCardDropdown").hide();
+
 for(var i = 0; i < shopItems.length; i++){
     $(".dropdownItems").before("<div class='dropdown-item' id='" + shopItems[i][0] + "'><span class='appliance'>" + shopItems[i][1] + "</span><span class='price'>" + shopItems[i][2] + "</span></div>");
 }
 
 var cartItems = [];
 var totalCost;
+var chosenCard;
 
 $(".chooseAppliance .dropdown-item").click(addToCart);
+
+for(radio in radios){
+    radios[1].click(function() {
+        alert(this.value);
+    });
+}    
+
+$(".selectCardDropdownMenu .dropdown-item").click(selectCard);
+
 
 function addToCart(){
     var itemID = $(this).attr("id");
@@ -39,4 +51,9 @@ function displayAddedItem(applianceName){
         }
     }
     $(".cartItemsBorder").before("<div class='cart-item-row'><span style='float: left;'>" + appliance + "</span><span style='float: right;'>" + price + "</span></div>");
+}
+
+function selectCard(){
+    chosenCard =  $(this).text();
+    $("#selectCardMenu").text(chosenCard);
 }

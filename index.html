@@ -41,14 +41,26 @@
         <br>
         <br>
 
-        <input class="paymentMethod" type="radio" name="paymentMethod" id="cash">Cash On Delivery
-        <input class="paymentMethod" type="radio" name="paymentMethod" id="card">Card
+        <span>Payment Method:
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown button
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item">Cash</a>
+                    <a class="dropdown-item">Card</a>
+                    <a class="dropdown-item">Something else here</a>
+                </div>
+            </div>
+        </span>
+
         <div class="dropdown selectCardDropdown">
             <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="selectCardMenu"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Choose
             </button>
-            <div class="dropdown-menu" aria-labelledby="selectCardMenu">
+            <div class="dropdown-menu selectCardDropdownMenu" aria-labelledby="selectCardMenu">
                 <span class="dropdown-item">Axis Bank</span>
                 <span class="dropdown-item">SBI</span>
                 <span class="dropdown-item">HDFC</span>

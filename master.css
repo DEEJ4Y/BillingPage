@@ -14,7 +14,7 @@ hr {
 }
 
 input {
-  margin-right: 5px;
+  display: none;
 }
 
 /* Appliance Dropdown Menu */
