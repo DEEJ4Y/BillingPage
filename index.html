@@ -11,7 +11,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Our CSS -->
-    <link rel="stylesheet" href="./master.css">
+    <link rel="stylesheet" href="./css/master.css">
 </head>
 
 <body>
@@ -31,7 +31,7 @@
         </div>
 
         <p>There are <span id="numberOfCartItems">0</span> items in your cart totalling Rs <span
-                id="cartItemTotal">0.</span></p>
+                id="cartItemTotal">0</span>.</p>
 
 
         <div class="cart-item-container">
@@ -41,22 +41,21 @@
         <br>
         <br>
 
-        <span>Payment Method:
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+        <span class="paymentMethodSection">Payment Method:
+            <div class="dropdown inlineDropdown">
+                <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" id="paymentMethodMenuButton"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown button
+                    Choose
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item">Cash</a>
-                    <a class="dropdown-item">Card</a>
-                    <a class="dropdown-item">Something else here</a>
+                <div class="dropdown-menu selectPaymentMethodMenu" aria-labelledby="paymentMethodMenuButton">
+                    <span class="dropdown-item">Cash</span>
+                    <span class="dropdown-item">Card</span>
                 </div>
             </div>
         </span>
 
-        <div class="dropdown selectCardDropdown">
-            <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="selectCardMenu"
+        <div class="dropdown inlineDropdown">
+            <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" id="selectCardMenu"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Choose
             </button>
@@ -87,7 +86,7 @@
         crossorigin="anonymous"></script>
 
     <!-- Our Script -->
-    <script src="./index.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>

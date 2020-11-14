@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMZ Purchase Details</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="./css/billingpage.css">
+
+</head>
+
+<body>
+    <div class="container-fluid billing-style">
+        <h1>Purchase Details</h1>
+        <br>
+        <div class="details-container">
+            <p>Items: <span id='totalNumberOfCartItems'> 0 </span></p>
+            <p>Total: Rs. <span id='cartItemTotal'> 0 </span>/-</p>
+            <p>Payment Method: <span id='paymentMethod'>Cash</span></p>
+            <p>Discount for <span class='cardName'>Kotak</span>: <span id='discountPercentage'> nu</span>%</p>
+            <p>Discount amount: Rs. <span id='discountAmount'></span>/-</p><br>
+            <h3>Final Amount</h3>
+            <h3>Rs. <span id='netAmount'></span>/-</h3>
+        </div>
+    </div>
+
+    <!-- jQuery, PopperJS and Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="./js/bill.js"></script>
+</body>
+
+</html>

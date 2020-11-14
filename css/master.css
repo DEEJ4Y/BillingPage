@@ -13,15 +13,7 @@ hr {
   border: 0;
 }
 
-input {
-  display: none;
-}
-
 /* Appliance Dropdown Menu */
-
-div .dropdown {
-  margin-top: 3rem;
-}
 
 .dropdown-item {
   overflow: auto;
@@ -51,6 +43,7 @@ div .dropdown {
 /* Cart Items section */
 .cart-item-container {
   width: 16rem;
+  max-height: 12rem;
   margin: auto;
   background-color: white;
   border-radius: 0.2rem;
@@ -73,6 +66,6 @@ div .dropdown {
   display: block;
 }
 
-.selectCardDropdown {
+.inlineDropdown {
   display: inline;
 }
