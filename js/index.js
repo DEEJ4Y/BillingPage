@@ -1,4 +1,5 @@
 var shopItems = [["fridge", "Fridge", 109000], ["desktop", "Desktop PC", 49000], ["laptop", "Laptop", 79000], ["microwave", "Microwave", 19000], ["oven", "Oven", 89000]];
+var cardDiscounts = [["Axis Bank", 2], ["SBI", 4], ["HDFC", 10], ["ICICI", 8], ["Bank of Baroda", 6]];
 
 $("#selectCardMenu").hide();
 
@@ -81,7 +82,7 @@ function checkout(){
         alert("There are no items in your cart!");
     }else if(chosePaymentMethod != true){
         alert("Please choose a payment method");
-    }else if(chosePaymentMethod == true && choseCardType != true){
+    }else if(paymentMethod == "Card" && choseCardType != true){
         alert("Please choose your card.");
     }else{
         sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
@@ -89,6 +90,7 @@ function checkout(){
         sessionStorage.setItem("paymentMethod", paymentMethod);
         if(paymentMethod == "Card"){
             sessionStorage.setItem("chosenCard", chosenCard);
+            sessionStorage.setItem("cardDiscounts", JSON.stringify(cardDiscounts));
         }
         window.location.href = "../billingPage.html";
     }    
