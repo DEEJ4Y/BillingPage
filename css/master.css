@@ -15,6 +15,9 @@ hr {
 }
 
 /* Appliance Dropdown Menu */
+.chooseAppliance {
+  width: 15rem;
+}
 
 .dropdown-item {
   overflow: auto;
@@ -26,7 +29,6 @@ hr {
 }
 
 .scrollable-menu {
-  width: 15rem;
   height: auto;
   max-height: 7rem;
   overflow-x: hidden;
@@ -42,19 +44,42 @@ hr {
 }
 
 /* Cart Items section */
+.cart-details {
+  width: 12rem;
+  margin: auto;
+}
+
+.cart-item-details {
+  float: left;
+}
+
+.cart-total-details {
+  float: right;
+}
+
 .cart-item-container {
-  width: 16rem;
-  max-height: 12rem;
+  width: 20rem;
+  max-height: 9rem;
   margin: auto;
   background-color: white;
   border-radius: 0.2rem;
 }
 
 .cart-item-row {
+  width: auto;
   overflow-x: hidden;
   margin: auto;
   padding: 0.5rem;
   color: #1b262c;
+}
+
+.remove-button {
+  margin: 0 0 0 1rem;
+}
+
+.cartItemsBorder {
+  height: 0px;
+  margin: 0px;
 }
 
 /* Payment Method */
