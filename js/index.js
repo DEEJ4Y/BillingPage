@@ -27,7 +27,6 @@ function addToCart(){
     var itemID = $(this).attr("id");
     cartItems.push(itemID);
     updateCartDetails();
-    displayAddedItem(itemID);
 }
 
 // function to update the cart details
@@ -48,18 +47,37 @@ function updateCartDetails(){
     }else{
         $(".cart-item-container").removeClass("scrollable-menu");
     }
+    
+    displayCartItems();
 }
 
-// function to display the item that was just added to the cart
-function displayAddedItem(applianceName){
+// function to display the items in the cart
+function displayCartItems(){
+    $(".cart-item-container").html("");
     var appliance, price;
-    for(var i = 0; i < shopItems.length; i++){
-        if(applianceName == shopItems[i][0]){
-            appliance = shopItems[i][1];
-            price = shopItems[i][2];
+    for(var h = 0; h < cartItems.length; h++){
+        applianceID = cartItems[h];
+        for(var i = 0; i < shopItems.length; i++){
+            if(applianceID == shopItems[i][0]){
+                appliance = shopItems[i][1];
+                price = shopItems[i][2];
+                $(".cart-item-container").append("<div class='cart-item-row'><span style='float: left; margin-right= 2rem;'>" + (h+1) + ". " + appliance + "</span><span style='float: right;'>Rs. " + price + " <button class='btn btn-sm btn-outline-danger remove-button' style='float: right;z-index=-10' id='remove-button-" + h + "'>Remove</button></span> </div>");
+            }
         }
     }
-    $(".cart-item-container").append("<div class='cart-item-row'><span style='float: left; margin-right= 2rem;'>" + cartItems.length + ". " + appliance + "</span><span style='float: right;'>" + price + " </span> </div>");
+    addRemoveButtonListener();
+}
+
+// Adds event listener to dynamically added remove buttons.
+function addRemoveButtonListener(){
+    $(".remove-button").click(removeItemFromCart);
+}
+
+// Removes the unwanted item from the array.
+function removeItemFromCart(){
+    var positionInCart = ($(this).attr("id")).slice(($(this).attr("id")).length - 1, ($(this).attr("id")).length);
+    cartItems.splice(positionInCart, 1);
+    updateCartDetails();
 }
 
 // function to set the payment method chosen by the user

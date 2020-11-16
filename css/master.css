@@ -50,7 +50,7 @@ hr {
 }
 
 .cart-item-container {
-  width: 12rem;
+  width: 20rem;
   max-height: 9rem;
   margin: auto;
   background-color: white;
@@ -75,6 +75,7 @@ hr {
 
 .remove-button {
   margin: 0 0 0 1rem;
+  padding: 0.125rem 0.5rem;
 }
 
 /* Payment Method */
