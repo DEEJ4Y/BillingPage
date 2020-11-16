@@ -20,14 +20,47 @@
         <h1>Purchase Details</h1>
         <br>
         <div class="details-container">
-            <p>Items: <span id="totalNumberOfCartItems"> 0 </span></p>
-            <p class="onlyCard">Total: Rs. <span id='cartItemTotal'> 0 </span>/-</p>
-            <p>Payment Method: <span id="paymentMethod">Cash</span></p>
-            <p class="onlyCard">Discount for <span id="cardName">Kotak</span>: <span id="discountPercentage"> nu</span>%
-            </p>
-            <p class="onlyCard">Discount amount: Rs. <span id="discountAmount"></span>/-</p><br>
-            <h3>Final Amount</h3>
-            <h3>Rs. <span id="netAmount">0</span>/-</h3>
+            <table class="table table-bordered table-light">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Appliance</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="total">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Total</td>
+                        <td class="price"><span id='cartItemTotal'> 0 </span>/-</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Payment Method</td>
+                        <td class="price"><span id="paymentMethod">Cash</span></td>
+                    </tr>
+                    <tr class="onlyCard">
+                        <td></td>
+                        <td>Discount for <span id="cardName">Kotak</span> </td>
+                        <td class="price"><span id="discountPercentage"> nu</span>%</td>
+                    </tr>
+                    <tr class="onlyCard">
+                        <td></td>
+                        <td>Discount amount</td>
+                        <td class="price"><span id="discountAmount"></span>/-</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Final Amount</td>
+                        <td class="price"><span id="netAmount">0</span>/-</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 

@@ -12,3 +12,12 @@ body {
 .details-container {
   text-align: left;
 }
+
+.table {
+  width: 25rem;
+  color: black;
+}
+
+.price {
+  text-align: right;
+}
