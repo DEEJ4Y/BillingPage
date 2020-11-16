@@ -12,6 +12,10 @@ for(var i = 0; i < shopItems.length; i++){
     $(".dropdownItems").before("<div class='dropdown-item' id='" + shopItems[i][0] + "'><span class='appliance'>" + shopItems[i][1] + "</span><span class='price'>" + shopItems[i][2] + "</span></div>");
 }
 
+for(var i = 0; i < cardDiscounts.length; i++){
+    $(".dropdownCards").before("<span class='dropdown-item'>" + cardDiscounts[i][0] + "</span>");
+}
+
 function addToCart(){
     var itemID = $(this).attr("id");
     cartItems.push(itemID);
