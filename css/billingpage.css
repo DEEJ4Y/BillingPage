@@ -19,6 +19,6 @@ body {
 
 .table {
   margin: auto;
-  width: 25rem;
+  max-width: 25rem;
   color: black;
 }
