@@ -17,9 +17,11 @@
 <body>
 
     <div class="container-fluid">
+        <!-- Page Heading -->
         <h1>RMZ Electricals</h1>
         <br>
 
+        <!-- Dropdown button to choose appliances -->
         <div class="dropdown">
             <button class="btn btn-lg btn-outline-light dropdown-toggle" type="button" id="applianceMenuButton"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -28,20 +30,23 @@
             <div class="dropdown-menu scrollable-menu chooseAppliance" aria-labelledby="applianceMenuButton"></div>
         </div>
 
+        <!-- Cart details: number of items in the cart and the total cost -->
         <div class="cart-details"><span class="cart-item-details">Items: <span id="numberOfCartItems">0</span></span>
             <span class="cart-total-details">Total: Rs <span id="cartItemTotal">0</span>.</span>
         </div>
         <br>
         <br>
 
-
+        <!-- Section to show what's in the cart -->
         <div class="cart-item-container"></div>
 
         <br>
         <br>
 
+        <!-- Section to choose the payment method -->
         <span class="paymentMethodSection">Payment Method:
             <div>
+                <!-- Dropdown button to choose the payment method -->
                 <div class="dropdown inlineDropdown">
                     <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button"
                         id="paymentMethodMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -52,6 +57,7 @@
                         <span class="dropdown-item">Card</span>
                     </div>
                 </div>
+                <!-- Dropdown button to choose the type of card in the case of a card payment. Hidden otherwise -->
                 <div class="dropdown inlineDropdown">
                     <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" id="selectCardMenu"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -63,9 +69,10 @@
             </div>
         </span>
 
-
+        <!-- Info regarding the discount -->
         <p>Get up to 10% discount on Card payments!</p>
 
+        <!-- Checkout or Submit button -->
         <button class="btn btn-primary checkout-button">Checkout</button>
 
     </div>

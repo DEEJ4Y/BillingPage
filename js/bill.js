@@ -1,10 +1,12 @@
+// Array to store the shop items. Did not get them from the initial page.
 var shopItems = [["fridge", "Fridge", 109000], ["desktop", "Desktop PC", 49000], ["laptop", "Laptop", 79000], ["microwave", "Microwave", 19000], ["oven", "Oven", 89000]];
-cartItems = JSON.parse(sessionStorage.getItem("cartItems"));
-totalCost = sessionStorage.getItem("totalCost");
-paymentMethod = sessionStorage.getItem("paymentMethod");
-var costAfterDiscount = totalCost;
 
+cartItems = JSON.parse(sessionStorage.getItem("cartItems"));        // Getting the items in the cart
+totalCost = sessionStorage.getItem("totalCost");        // Getting the total cost
+paymentMethod = sessionStorage.getItem("paymentMethod");        // Getting the payment method
+var costAfterDiscount = totalCost;      // Variable to calculate the discount
 
+// Getting payment info in case of a card payment. Hiding the details if otherwise.
 if(paymentMethod == "Card"){
     chosenCard = sessionStorage.getItem("chosenCard");
     cardDiscounts = JSON.parse(sessionStorage.getItem("cardDiscounts"));
@@ -23,6 +25,7 @@ if(paymentMethod == "Card"){
     $("#netAmount").text(costAfterDiscount);   
 }
 
+// Adding all the items in the cart from the 
 for(var i = 0; i < cartItems.length; i++){
     for(var j = 0; j < shopItems.length; j++){
         if(cartItems[i] == shopItems[j][0]){
@@ -31,6 +34,7 @@ for(var i = 0; i < cartItems.length; i++){
     }
 }
 
+// Changing the details in the entire table.
 $("#totalNumberOfCartItems").text(cartItems.length);
 $("#cartItemTotal").text(totalCost);
 $("#paymentMethod").text(paymentMethod);

@@ -15,6 +15,10 @@ hr {
 }
 
 /* Appliance Dropdown Menu */
+.appliance {
+  float: left;
+}
+
 .chooseAppliance {
   width: 15rem;
 }
@@ -28,19 +32,15 @@ hr {
   color: white;
 }
 
+.price {
+  float: right;
+  margin-left: 2rem;
+}
+
 .scrollable-menu {
   height: auto;
   max-height: 7rem;
   overflow-x: hidden;
-}
-
-.appliance {
-  float: left;
-}
-
-.price {
-  float: right;
-  margin-left: 2rem;
 }
 
 /* Cart Items section */
@@ -49,20 +49,20 @@ hr {
   margin: auto;
 }
 
-.cart-item-details {
-  float: left;
-}
-
-.cart-total-details {
-  float: right;
-}
-
 .cart-item-container {
   width: 12rem;
   max-height: 9rem;
   margin: auto;
   background-color: white;
   border-radius: 0.2rem;
+}
+
+.cart-item-details {
+  float: left;
+}
+
+.cart-total-details {
+  float: right;
 }
 
 .cart-item-row {

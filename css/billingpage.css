@@ -13,12 +13,12 @@ body {
   text-align: left;
 }
 
+.price {
+  text-align: right;
+}
+
 .table {
   margin: auto;
   width: 25rem;
   color: black;
-}
-
-.price {
-  text-align: right;
 }
