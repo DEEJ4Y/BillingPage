@@ -10,7 +10,7 @@ var totalCost;      // To store the total cost
 var chosePaymentMethod = false;     // To check if the user has selected a payment method.
 var paymentMethod;      // To store the payment method
 var choseCardType = false;      // To check if the user has chosen a card in the case of the card payment method.
-var chosenCard;     // To store the chosen card in the case of card paymen method.
+var chosenCard;     // To store the chosen card in the case of card payment method.
 
 // Dynamically adding the elements in the shopItems array to the dropdown button
 for(var i = 0; i < shopItems.length; i++){
@@ -75,7 +75,8 @@ function addRemoveButtonListener(){
 
 // Removes the unwanted item from the array.
 function removeItemFromCart(){
-    var positionInCart = ($(this).attr("id")).slice(($(this).attr("id")).length - 1, ($(this).attr("id")).length);
+    var itemID = $(this).attr("id");
+    var positionInCart = itemID.slice(14, itemID.length);
     cartItems.splice(positionInCart, 1);
     updateCartDetails();
 }
