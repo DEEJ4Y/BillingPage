@@ -26,7 +26,7 @@ if(paymentMethod == "Card"){
 for(var i = 0; i < cartItems.length; i++){
     for(var j = 0; j < shopItems.length; j++){
         if(cartItems[i] == shopItems[j][0]){
-            $(".total").before("<tr><td>" + (i+1) + "</td><td>" + shopItems[j][1] + "</td><td class='price'>" + shopItems[j][2] + "/-</td></tr>");
+            $(".total").before("<tr><td>" + (i+1) + ".</td><td>" + shopItems[j][1] + "</td><td class='price'>" + shopItems[j][2] + "/-</td></tr>");
         }
     }
 }
