@@ -58,7 +58,7 @@ hr {
 }
 
 .cart-item-container {
-  width: 20rem;
+  width: 12rem;
   max-height: 9rem;
   margin: auto;
   background-color: white;
@@ -75,11 +75,6 @@ hr {
 
 .remove-button {
   margin: 0 0 0 1rem;
-}
-
-.cartItemsBorder {
-  height: 0px;
-  margin: 0px;
 }
 
 /* Payment Method */

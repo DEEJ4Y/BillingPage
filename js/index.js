@@ -9,11 +9,11 @@ var choseCardType = false;
 var chosenCard;
 
 for(var i = 0; i < shopItems.length; i++){
-    $(".dropdownItems").before("<div class='dropdown-item' id='" + shopItems[i][0] + "'><span class='appliance'>" + shopItems[i][1] + "</span><span class='price'>" + shopItems[i][2] + "</span></div>");
+    $(".chooseAppliance").append("<div class='dropdown-item' id='" + shopItems[i][0] + "'><span class='appliance'>" + shopItems[i][1] + "</span><span class='price'>" + shopItems[i][2] + "</span></div>");
 }
 
 for(var i = 0; i < cardDiscounts.length; i++){
-    $(".dropdownCards").before("<span class='dropdown-item'>" + cardDiscounts[i][0] + "</span>");
+    $(".selectCardDropdownMenu").append("<span class='dropdown-item'>" + cardDiscounts[i][0] + "</span>");
 }
 
 function addToCart(){
@@ -50,7 +50,7 @@ function displayAddedItem(applianceName){
             price = shopItems[i][2];
         }
     }
-    $(".cartItemsBorder").before("<div class='cart-item-row'><span style='float: left; margin-right= 2rem;'>" + cartItems.length + ". " + appliance + "</span><span style='float: right;'>" + price + " </span> </div>");
+    $(".cart-item-container").append("<div class='cart-item-row'><span style='float: left; margin-right= 2rem;'>" + cartItems.length + ". " + appliance + "</span><span style='float: right;'>" + price + " </span> </div>");
 }
 
 function selectCard(){

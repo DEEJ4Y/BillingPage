@@ -25,9 +25,7 @@
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Appliances
             </button>
-            <div class="dropdown-menu scrollable-menu chooseAppliance" aria-labelledby="applianceMenuButton">
-                <span class="dropdownItems"></span>
-            </div>
+            <div class="dropdown-menu scrollable-menu chooseAppliance" aria-labelledby="applianceMenuButton"></div>
         </div>
 
         <div class="cart-details"><span class="cart-item-details">Items: <span id="numberOfCartItems">0</span></span>
@@ -37,35 +35,35 @@
         <br>
 
 
-        <div class="cart-item-container">
-            <hr class="cartItemsBorder">
-        </div>
+        <div class="cart-item-container"></div>
 
         <br>
         <br>
 
         <span class="paymentMethodSection">Payment Method:
-            <div class="dropdown inlineDropdown">
-                <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" id="paymentMethodMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Choose
-                </button>
-                <div class="dropdown-menu selectPaymentMethodMenu" aria-labelledby="paymentMethodMenuButton">
-                    <span class="dropdown-item">Cash</span>
-                    <span class="dropdown-item">Card</span>
+            <div>
+                <div class="dropdown inlineDropdown">
+                    <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button"
+                        id="paymentMethodMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose
+                    </button>
+                    <div class="dropdown-menu selectPaymentMethodMenu" aria-labelledby="paymentMethodMenuButton">
+                        <span class="dropdown-item">Cash</span>
+                        <span class="dropdown-item">Card</span>
+                    </div>
+                </div>
+                <div class="dropdown inlineDropdown">
+                    <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" id="selectCardMenu"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose
+                    </button>
+                    <div class="dropdown-menu selectCardDropdownMenu scrollable-menu" aria-labelledby="selectCardMenu">
+                    </div>
                 </div>
             </div>
         </span>
 
-        <div class="dropdown inlineDropdown">
-            <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" id="selectCardMenu"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Choose
-            </button>
-            <div class="dropdown-menu selectCardDropdownMenu scrollable-menu" aria-labelledby="selectCardMenu">
-                <span class="dropdownCards"></span>
-            </div>
-        </div>
+
         <p>Get up to 10% discount on Card payments!</p>
 
         <button class="btn btn-primary checkout-button">Checkout</button>
