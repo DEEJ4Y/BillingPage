@@ -25,6 +25,15 @@ for(var i = 0; i < cardDiscounts.length; i++){
 // function to add an appliance to the cart
 function addToCart(){
     var itemID = $(this).attr("id");
+    for(var i = 0; i < shopItems.length; i++){
+        if(itemID == shopItems[i][0]){
+            var applianceID = shopItems[i][0];
+            var applianceName = shopItems[i][1];
+            var appliancePrice = shopItems[i][2];
+            var applianceQuantity = 1;
+            itemID = [applianceID, applianceName, appliancePrice, applianceQuantity];
+        }
+    }
     cartItems.push(itemID);
     updateCartDetails();
 }
@@ -34,12 +43,8 @@ function updateCartDetails(){
     var numberOfCartItems = cartItems.length;
     $("#numberOfCartItems").text(numberOfCartItems);
     totalCost = 0;    
-    for(var i = 0; i < numberOfCartItems; i++){
-        for(var j = 0; j < shopItems.length; j++){
-            if(cartItems[i] == shopItems[j][0]){
-                totalCost = totalCost + shopItems[j][2];
-            }
-        }
+    for(var i = 0; i < numberOfCartItems; i++){        
+        totalCost = totalCost + cartItems[i][2];
     }
     $("#cartItemTotal").text(totalCost);
     if(numberOfCartItems > 3){
@@ -54,16 +59,8 @@ function updateCartDetails(){
 // function to display the items in the cart
 function displayCartItems(){
     $(".cart-item-container").html("");
-    var appliance, price;
     for(var h = 0; h < cartItems.length; h++){
-        applianceID = cartItems[h];
-        for(var i = 0; i < shopItems.length; i++){
-            if(applianceID == shopItems[i][0]){
-                appliance = shopItems[i][1];
-                price = shopItems[i][2];
-                $(".cart-item-container").append("<div class='cart-item-row'><span style='float: left; margin-right= 2rem;'>" + (h+1) + ". " + appliance + "</span><span style='float: right;'>Rs. " + price + " <button class='btn btn-sm btn-outline-danger remove-button' style='float: right;z-index=-10' id='remove-button-" + h + "'>Remove</button></span> </div>");
-            }
-        }
+        $(".cart-item-container").append("<div class='cart-item-row'><span style='float: left; margin-right= 2rem;'>" + (h+1) + ". " + cartItems[h][1] + "</span><span style='float: right;'>Rs. " + cartItems[h][2] + " <button class='btn btn-sm btn-outline-danger remove-button' style='float: right;z-index=-10' id='remove-button-" + h + "'>Remove</button></span> </div>");
     }
     addRemoveButtonListener();
 }
