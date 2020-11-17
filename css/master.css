@@ -78,6 +78,14 @@ hr {
   padding: 0.0625rem 0.5rem;
 }
 
+.minusButton {
+  margin: 0.125rem 5px 0 2rem;
+}
+
+.plusButton {
+  margin: 0 2rem 0 0.125rem;
+}
+
 /* Payment Method */
 
 #card {
