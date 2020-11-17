@@ -72,14 +72,16 @@ function updateCartDetails(){
 function displayCartItems(){
     $(".cart-item-container").html("");
     for(var h = 0; h < cartItems.length; h++){
-        $(".cart-item-container").append("<div class='cart-item-row'><span style='float: left; margin-right= 2rem;'>" + (h+1) + ". " + cartItems[h][1] + " x " + cartItems[h][3] + "</span><span style='float: right;'>Rs. " + cartItems[h][2] + " <button class='btn btn-sm btn-outline-danger remove-button' style='float: right;z-index=-10' id='remove-button-" + h + "'>Remove</button></span> </div>");
+        $(".cart-item-container").append("<div class='cart-item-row'><span style='float: left; margin-right= 2rem;'>" + (h+1) + ". " + cartItems[h][1] + "</span><span style='float: right;'>Rs. " + cartItems[h][2] + " <button class='btn btn-sm btn-outline-dark button minusButton' style='z-index=-10' id='minus-button-" + h + "'>-</button><span class='button'>" + cartItems[h][3] + "</span><button class='btn btn-sm btn-outline-dark button plusButton' style='z-index=-10' id='plus-button-" + h + "'>+</button><span class='remove-button fa fa-trash-o button' id='remove-button-" + h + "'></span></span> </div>");
     }
-    addRemoveButtonListener();
+    addButtonListener();
 }
 
 // Adds event listener to dynamically added remove buttons.
-function addRemoveButtonListener(){
+function addButtonListener(){
     $(".remove-button").click(removeItemFromCart);
+    $(".minusButton").click(removeOneItemFromCart);
+    $(".plusButton").click(addOneItemToCart);
 }
 
 // Removes the unwanted item from the array.
@@ -87,6 +89,23 @@ function removeItemFromCart(){
     var itemID = $(this).attr("id");
     var positionInCart = itemID.slice(14, itemID.length);
     cartItems.splice(positionInCart, 1);
+    updateCartDetails();
+}
+
+function removeOneItemFromCart(){
+    var itemID = $(this).attr("id");
+    var positionInCart = itemID.slice(13, itemID.length);
+    cartItems[positionInCart][3] -= 1;
+    if(cartItems[positionInCart][3] === 0){
+        cartItems.splice(positionInCart, 1);
+    }
+    updateCartDetails();
+}
+
+function addOneItemToCart(){
+    var itemID = $(this).attr("id");
+    var positionInCart = itemID.slice(12, itemID.length);
+    cartItems[positionInCart][3] += 1;
     updateCartDetails();
 }
 
