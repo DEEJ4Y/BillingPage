@@ -92,6 +92,7 @@ function removeItemFromCart(){
     updateCartDetails();
 }
 
+// Removes one count of the unwanted item from the array
 function removeOneItemFromCart(){
     var itemID = $(this).attr("id");
     var positionInCart = itemID.slice(13, itemID.length);
@@ -102,6 +103,7 @@ function removeOneItemFromCart(){
     updateCartDetails();
 }
 
+// Adds one count from the unwanted item from the array
 function addOneItemToCart(){
     var itemID = $(this).attr("id");
     var positionInCart = itemID.slice(12, itemID.length);
