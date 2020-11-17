@@ -24,7 +24,7 @@ if(paymentMethod == "Card"){
 
 // Adding all the items in the cart from the 
 for(var i = 0; i < cartItems.length; i++){
-    $(".total").before("<tr><td>" + (i+1) + ".</td><td>" + cartItems[i][1] + "</td><td class='price'>" + cartItems[i][2] + "/-</td></tr>");
+    $(".total").before("<tr><td>" + (i+1) + ".</td><td>" + cartItems[i][1] + "</td><td style='text-align: center;'>" + cartItems[i][3] +"</td><td class='price'>" + cartItems[i][2] + "/-</td></tr>");
 }
 
 // Changing the details in the entire table.

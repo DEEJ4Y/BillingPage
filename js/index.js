@@ -25,27 +25,39 @@ for(var i = 0; i < cardDiscounts.length; i++){
 // function to add an appliance to the cart
 function addToCart(){
     var itemID = $(this).attr("id");
-    for(var i = 0; i < shopItems.length; i++){
-        if(itemID == shopItems[i][0]){
-            var applianceID = shopItems[i][0];
-            var applianceName = shopItems[i][1];
-            var appliancePrice = shopItems[i][2];
-            var applianceQuantity = 1;
-            itemID = [applianceID, applianceName, appliancePrice, applianceQuantity];
+    var alreadyInCart = false;
+    for(var i = 0; i < cartItems.length; i++){
+        if(itemID == cartItems[i][0]){
+            alreadyInCart = true;
+            cartItems[i][3] += 1;
         }
     }
-    cartItems.push(itemID);
+    if(alreadyInCart == false){
+        for(var i = 0; i < shopItems.length; i++){
+            if(itemID == shopItems[i][0]){
+                var applianceID = shopItems[i][0];
+                var applianceName = shopItems[i][1];
+                var appliancePrice = shopItems[i][2];
+                var applianceQuantity = 1;
+                itemID = [applianceID, applianceName, appliancePrice, applianceQuantity];
+            }
+        }
+        cartItems.push(itemID);
+    }
+    
     updateCartDetails();
 }
 
 // function to update the cart details
 function updateCartDetails(){    
-    var numberOfCartItems = cartItems.length;
-    $("#numberOfCartItems").text(numberOfCartItems);
-    totalCost = 0;    
-    for(var i = 0; i < numberOfCartItems; i++){        
-        totalCost = totalCost + cartItems[i][2];
+    var numberOfCartItems = 0;
+    totalCost = 0;
+
+    for(var i = 0; i < cartItems.length; i++){   
+        numberOfCartItems = numberOfCartItems + cartItems[i][3];
+        totalCost = totalCost + (cartItems[i][2] * cartItems[i][3]);
     }
+    $("#numberOfCartItems").text(numberOfCartItems);
     $("#cartItemTotal").text(totalCost);
     if(numberOfCartItems > 3){
         $(".cart-item-container").addClass("scrollable-menu");
@@ -60,7 +72,7 @@ function updateCartDetails(){
 function displayCartItems(){
     $(".cart-item-container").html("");
     for(var h = 0; h < cartItems.length; h++){
-        $(".cart-item-container").append("<div class='cart-item-row'><span style='float: left; margin-right= 2rem;'>" + (h+1) + ". " + cartItems[h][1] + "</span><span style='float: right;'>Rs. " + cartItems[h][2] + " <button class='btn btn-sm btn-outline-danger remove-button' style='float: right;z-index=-10' id='remove-button-" + h + "'>Remove</button></span> </div>");
+        $(".cart-item-container").append("<div class='cart-item-row'><span style='float: left; margin-right= 2rem;'>" + (h+1) + ". " + cartItems[h][1] + " x " + cartItems[h][3] + "</span><span style='float: right;'>Rs. " + cartItems[h][2] + " <button class='btn btn-sm btn-outline-danger remove-button' style='float: right;z-index=-10' id='remove-button-" + h + "'>Remove</button></span> </div>");
     }
     addRemoveButtonListener();
 }
