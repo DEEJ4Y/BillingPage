@@ -146,7 +146,7 @@ function checkout(){
             sessionStorage.setItem("chosenCard", chosenCard);
             sessionStorage.setItem("cardDiscounts", JSON.stringify(cardDiscounts));
         }
-        window.location.href = "../billingPage.html";
+        window.location.href = "./billingPage.html";
     }    
 }
 
